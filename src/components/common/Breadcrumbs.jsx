@@ -1,11 +1,10 @@
 import { useLocation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { WorkspaceContext } from "../../context/WorkspaceContext";
+import { useWorkspace } from "../../hooks/useWorkspace";
 
 export default function Breadcrumbs() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { data } = useContext(WorkspaceContext);
+  const { data } = useWorkspace();
 
   if (location.pathname === "/") return null;
 
@@ -28,40 +27,48 @@ export default function Breadcrumbs() {
   }
 
   return (
-    <div className="text-sm text-gray-600 dark:text-gray-400 flex gap-1">
+    <nav
+      aria-label="Breadcrumb"
+      className="flex flex-wrap items-center gap-1 text-sm text-gray-500"
+    >
+      {/* Home */}
       <span
         onClick={() => navigate("/")}
-        className="cursor-pointer hover:underline"
+        className="cursor-pointer hover:text-gray-900 transition"
       >
         Home
       </span>
 
-      <span>›</span>
+      <span className="mx-1">/</span>
+
+      {/* Teams */}
       <span
         onClick={() => navigate("/teams")}
-        className="cursor-pointer hover:underline"
+        className="cursor-pointer hover:text-gray-900 transition"
       >
         Teams
       </span>
 
+      {/* Team */}
       {team && (
         <>
-          <span>›</span>
+          <span className="mx-1">/</span>
           <span
             onClick={() => navigate(`/teams/${team.id}`)}
-            className="cursor-pointer hover:underline"
+            className="cursor-pointer hover:text-gray-900 transition"
           >
-            {team.name} Projects
+            {team.name}
           </span>
         </>
       )}
 
+      {/* Project */}
       {project && (
         <>
-          <span>›</span>
-          <span className="font-medium">Task</span>
+          <span className="mx-1">/</span>
+          <span className="font-medium text-gray-900">Task Board</span>
         </>
       )}
-    </div>
+    </nav>
   );
 }

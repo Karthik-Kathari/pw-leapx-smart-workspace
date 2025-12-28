@@ -1,85 +1,146 @@
-# PW LeapX – Smart Workspace Dashboard
+# Smart Workspace Dashboard
 
-A professional, frontend-only Workspace Management tool built with **React** and  **Tailwind CSS** . This dashboard allows users to navigate through high-level team metrics down to specific project task boards with a clean, intuitive interface.
+A modern, responsive workspace dashboard to manage **teams, projects, and tasks** in one place.
 
-The primary goal of this project is to demonstrate **architectural clarity, clean state management, and deliberate UI/UX decisions.**
-
----
-
-## 🛠 Tech Stack
-
-* **React (Vite)** – High-performance development and modern build tooling.
-* **React Router** – Clean client-side navigation between Teams and Task Boards.
-* **Context API** – Global state management for workspace data and theme settings.
-* **Tailwind CSS** – Utility-first styling for a responsive, modern design.
-* **localStorage** – Local data persistence to simulate a backend environment.
+Built with a strong focus on  **clean UI, usability, and scalable frontend architecture** .
 
 ---
 
-## 🚀 Setup Instructions
+## 🚀 Features
 
-1. **Clone the repository**
-2. **Install dependencies**
-   **Bash**
+### Core
 
-   ```
-   npm install
-   ```
-3. **Start the development server**
-   **Bash**
+* Teams overview with project & task statistics
+* Project-wise task boards (Kanban style)
+* Task status management (Todo / In Progress / Done)
+* Real-time UI updates using React state
+* Breadcrumb navigation for clear hierarchy
 
-   ```
-   npm run dev
-   ```
-4. **View the application**
-   Open `http://localhost:5173` in your browser.
+### UX & UI
 
----
+* Fully responsive (desktop → mobile)
+* Meaningful empty states
+* Hover & focus states for accessibility
+* Dark mode support
+* Clean, consistent SaaS-style design
 
-## 📂 Application Overview
+### Bonus Features (Implemented)
 
-* **Dashboard Home:** A clean entry point into the workspace.
-* **Teams Overview:** High-level summary cards showing project counts and active task loads.
-* **Team Details:** Filterable view of projects (All / Active / Completed).
-* **Task Board:** A kanban-style board categorized by  *Todo* ,  *In-Progress* , and  *Done* .
-* **Smart Navigation:** Includes dynamic breadcrumbs and a left-aligned "Back" button for natural user flow.
-* **Dark Mode:** Full system-aware dark mode support with persistence.
+* 🌙 Dark Mode (persisted with `localStorage`)
+* 🔍 Search & filter tasks in real time
+* 💾 Local state persistence via context
 
 ---
 
-## 🎯 Development Priorities
+## 🧱 Tech Stack
 
-### 1. Architectural Clarity
+* **React** (Vite)
+* **React Router**
+* **Tailwind CSS**
+* **Context API**
+* **LocalStorage**
 
-The project follows a strict folder structure:
-
-* `common/`: Reusable UI components (Breadcrumbs, Buttons).
-* `layout/`: Structural wrappers like `AppLayout`.
-* `pages/`: Feature-specific views (TaskBoard, TeamDetails).
-* `context/`: Centralized logic for data and themes.
-
-### 2. Strategic UI/UX
-
-* **Navigation Placement:** Moved the "Back" action to the top-left to follow standard eye-tracking patterns (F-pattern), making navigation faster for the user.
-* **Data Density:** Balanced information on team cards so users can see "Active Tasks" without clicking deep into the app.
-
-### 3. Maintainability
-
-Used modular components and a predictable data flow (JSON-based workspace data) to ensure the app is easy to scale or connect to an API later.
+Frontend-only implementation using  **static JSON-like data** , designed to be backend-ready.
 
 ---
 
-## ⚖️ Trade-offs & Decisions
+## ⚙️ Setup Instructions
 
-* **Frontend-Only:** Chose `localStorage` and static data over a backend to focus entirely on UI architecture and state handling.
-* **Direct Navigation:** Focused on clear, clickable paths rather than complex drag-and-drop to ensure the core logic was 100% bug-free first.
-* **No Auth:** Skipped login/roles to avoid over-engineering, focusing instead on the dashboard experience.
+### 1️⃣ Clone the repository
+
+<pre class="overflow-visible! px-0!" data-start="234" data-end="319"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>git </span><span>clone</span><span> https://github.com/Karthik-Kathari/pw-leapx-smart-workspace.git
+</span></span></code></div></div></pre>
+
+### 2️⃣ Navigate into the project folder
+
+<pre class="overflow-visible! px-0!" data-start="362" data-end="401"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>cd</span><span> pw-leapx-smart-workspace
+</span></span></code></div></div></pre>
+
+### 3️⃣ Install dependencies
+
+<pre class="overflow-visible! px-0!" data-start="432" data-end="455"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>npm install
+</span></span></code></div></div></pre>
+
+### 4️⃣ Start the development server
+
+<pre class="overflow-visible! px-0!" data-start="494" data-end="517"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-bash"><span><span>npm run dev
+</span></span></code></div></div></pre>
+
+### 5️⃣ Open in browser
+
+<pre class="overflow-visible! px-0!" data-start="543" data-end="576"><div class="contain-inline-size rounded-2xl corner-superellipse/1.1 relative bg-token-sidebar-surface-primary"><div class="sticky top-[calc(--spacing(9)+var(--header-height))] @w-xl/main:top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-bg-elevated-secondary text-token-text-secondary flex items-center gap-4 rounded-sm px-2 font-sans text-xs"></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-text"><span><span>http://localhost:5173</span></span></code></div></div></pre>
 
 ---
 
-## 🔮 Future Improvements
+## 🧠 Key Architectural Decisions
 
-* **Real-time Persistence:** Connect to a Node.js/Express backend.
-* **UI Fluidity:** Add subtle Micro-interactions (hover effects and transitions) to make the board feel more "live."
-* **Global Search:** Implement a command-palette style search to find projects or tasks instantly.
-* **Accessibility (ARIA):** Improve accessibility.
+### 1. Context API for State
+
+* Centralized workspace data (`teams → projects → tasks`)
+* Easy to replace with API later
+
+### 2. Frontend-only First
+
+* Static data keeps complexity low
+* Faster development & easier review
+* Backend can be plugged in without much refactor
+
+### 3. Layout Separation
+
+* `AppLayout` handles sidebar & breadcrumbs
+* Home page uses a clean, full-screen layout
+* Improves maintainability
+
+### 4. Tailwind Utility-First Styling
+
+* Consistent spacing, colors, and typography
+* Faster UI iteration
+* Easy dark mode support
+
+---
+
+## ⚖️ Trade-offs Made
+
+| Decision         | Reason                       |
+| ---------------- | ---------------------------- |
+| No backend       | Out of scope, frontend focus |
+| Local state only | Faster UX, simpler logic     |
+| No drag & drop   | Avoided heavy libraries      |
+| Static data      | Predictable demo behavior    |
+
+---
+
+## 🔮 What I Would Improve With More Time
+
+* Drag & drop task movement
+* Backend API (CRUD operations)
+* Authentication & role-based access
+* Animations for task transitions
+* Better mobile navigation (hamburger menu)
+* Performance optimization for large datasets and more.
+
+---
+
+## 📱 Responsive Behavior
+
+* Desktop: Sidebar + content layout
+* Tablet: Reduced spacing, stacked grids
+* Mobile:
+  * Sidebar converts to top section
+  * Cards stack vertically
+  * Touch-friendly interactions
+
+---
+
+## 🧪 Error Handling
+
+* Graceful empty states
+* Error boundary for unexpected crashes
+* Fallback UI when data is missing or crash
+
+---
+
+## 👤 Author
+
+**Karthik Kathari**
+**🔗 LinkedIn: [https://www.linkedin.com/in/karthikkathari/](https://www.linkedin.com/in/karthikkathari/)**
