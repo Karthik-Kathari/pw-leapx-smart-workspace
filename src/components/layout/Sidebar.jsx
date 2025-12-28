@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useTheme } from "../../hooks/useTheme";
 
 export default function Sidebar() {
@@ -24,13 +24,21 @@ export default function Sidebar() {
     >
       {/* Top section */}
       <div>
-        {/* Logo */}
-        <div className="h-14 flex items-center gap-2 px-4 lg:px-6 font-semibold text-lg border-b border-gray-200 dark:border-gray-800">
+        {/* Logo (goes to Home) */}
+        <Link
+          to="/"
+          className="
+            h-14 flex items-center gap-2 px-4 lg:px-6
+            font-semibold text-lg
+            border-b border-gray-200 dark:border-gray-800
+            hover:opacity-90 transition
+          "
+        >
           <span className="w-8 h-8 flex items-center justify-center rounded bg-blue-600 text-white">
             S
           </span>
-          <span onClick={() => navigate("/")} className="text-gray-900 dark:text-white">SmartWorkspace</span>
-        </div>
+          <span className="text-gray-900 dark:text-white">SmartWorkspace</span>
+        </Link>
 
         {/* Navigation */}
         <nav className="px-3 py-3">

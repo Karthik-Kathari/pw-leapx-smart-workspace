@@ -6,7 +6,7 @@ export default function AppLayout({ children }) {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  // HOME → full screen only
+  {/* Home */}
   if (isHome) {
     return (
       <div className="w-screen h-screen overflow-hidden bg-black">

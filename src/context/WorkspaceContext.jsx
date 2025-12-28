@@ -6,7 +6,7 @@ export const WorkspaceContext = createContext();
 export function WorkspaceProvider({ children }) {
   const [data, setData] = useState(null);
 
-  // Load data (JSON first, then localStorage)
+  // Load data
   useEffect(() => {
     const savedData = localStorage.getItem("workspace-data");
 

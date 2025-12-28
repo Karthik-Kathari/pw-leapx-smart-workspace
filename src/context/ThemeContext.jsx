@@ -5,13 +5,11 @@ export const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState("light");
 
-  // Load saved theme
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme") || "light";
     setTheme(savedTheme);
   }, []);
 
-  // Apply theme to BODY (reliable)
   useEffect(() => {
     const body = document.body;
 

@@ -26,7 +26,9 @@ export default function TaskBoard() {
     return <div className="p-6">Project not found.</div>;
   }
 
-  /* ------------------ UPDATE STATUS ------------------ */
+  {
+    /* Statuss */
+  }
   const updateTaskStatus = (taskId, newStatus) => {
     const updated = structuredClone(data);
     const tasks = updated.teams[teamIndex]?.projects[projectIndex]?.tasks || [];
@@ -38,7 +40,9 @@ export default function TaskBoard() {
     setData(updated);
   };
 
-  /* ------------------ UPDATE PRIORITY ------------------ */
+  {
+    /* Priority */
+  }
   const updateTaskPriority = (taskId, newPriority) => {
     const updated = structuredClone(data);
     const tasks = updated.teams[teamIndex]?.projects[projectIndex]?.tasks || [];
