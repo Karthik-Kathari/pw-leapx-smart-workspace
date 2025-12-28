@@ -1,8 +1,8 @@
 # Smart Workspace Dashboard
 
-A modern, responsive workspace dashboard to manage **teams, projects, and tasks** in one place.
+A modern, responsive workspace dashboard to manage **teams, projects, and tasks** in one place. Built with a strong focus on **clean UI, usability, and scalable frontend architecture**.
 
-Built with a strong focus on  **clean UI, usability, and scalable frontend architecture** .
+Crafted to resemble real-world enterprise dashboards with **structured navigation** and clear workflows. Delivers a consistent experience across devices with dark mode and performance-focused design.
 
 ---
 
@@ -101,12 +101,12 @@ Frontend-only implementation using  **static JSON-like data** , designed to be b
 
 ## ⚖️ Trade-offs Made
 
-| Decision         | Reason                       |
-| ---------------- | ---------------------------- |
-| No backend       | Out of scope, frontend focus |
-| Local state only | Faster UX, simpler logic     |
-| No drag & drop   | Avoided heavy libraries      |
-| Static data      | Predictable demo behavior    |
+| Decision         | Reason                                |
+| ---------------- | ------------------------------------- |
+| No backend       | Frontend focus due to time constraint |
+| Local state only | Faster UX, simpler logic              |
+| No drag & drop   | Avoided heavy libraries               |
+| Static data      | Predictable demo behavior             |
 
 ---
 
