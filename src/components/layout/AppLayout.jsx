@@ -6,7 +6,9 @@ export default function AppLayout({ children }) {
   const location = useLocation();
   const isHome = location.pathname === "/";
 
-  {/* Home */}
+  {
+    /* Home */
+  }
   if (isHome) {
     return (
       <div className="w-screen h-screen overflow-hidden bg-black">
